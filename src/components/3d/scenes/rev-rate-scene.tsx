@@ -13,7 +13,7 @@ export function RevRateScene() {
   const [{ rpm, showAxis, ballColor }, set] = useControls("Rev Rate", () => ({
     rpm: { value: 400, min: 150, max: 650, step: 10, label: "RPM" },
     showAxis: { value: false, label: "Show Axis" },
-    ballColor: { value: "#1a1a2e", label: "Ball Color" },
+    ballColor: { value: "#2563eb", label: "Ball Color" },
   }));
 
   // Sync context params into Leva when SceneCue fires

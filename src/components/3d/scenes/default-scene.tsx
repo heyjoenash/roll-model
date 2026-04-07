@@ -8,7 +8,7 @@ export function DefaultScene() {
   return (
     <>
       <SceneLighting />
-      <BowlingBall rpm={200} color="#1a1a2e" />
+      <BowlingBall rpm={200} color="#2563eb" />
       <OrbitControls
         enablePan={false}
         minDistance={0.2}

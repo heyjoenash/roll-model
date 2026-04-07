@@ -18,7 +18,7 @@ interface BowlingBallProps {
 export function BowlingBall({
   rpm = 400,
   axisTilt = 15,
-  color = "#1a1a2e",
+  color = "#2563eb",
   showAxis = false,
   radius = BALL_RADIUS_METERS,
 }: BowlingBallProps) {
@@ -36,24 +36,17 @@ export function BowlingBall({
 
   return (
     <group ref={groupRef} rotation={[tiltRad, 0, 0]}>
-      {/* Main ball — meshPhysicalMaterial for realistic reactive resin look */}
       <mesh ref={ballRef} castShadow>
         <sphereGeometry args={[radius, 64, 64]} />
-        <meshPhysicalMaterial
+        <meshStandardMaterial
           color={color}
-          roughness={0.15}
-          metalness={0.0}
-          clearcoat={1.0}
-          clearcoatRoughness={0.08}
-          reflectivity={0.9}
-          envMapIntensity={1.2}
+          roughness={0.25}
+          metalness={0.1}
         />
       </mesh>
 
-      {/* Finger holes */}
       <FingerHoles radius={radius} />
 
-      {/* Axis line (conditional) */}
       {showAxis && (
         <Line
           points={[
@@ -75,21 +68,16 @@ function FingerHoles({ radius }: { radius: number }) {
 
   return (
     <group position={[0, radius * 0.15, -radius * 0.85]}>
-      {/* Middle finger */}
       <mesh position={[-holeOffset * 0.5, holeOffset * 0.3, 0]}>
         <cylinderGeometry args={[holeRadius, holeRadius, holeDepth, 16]} />
         <meshStandardMaterial color="#050505" roughness={0.9} />
       </mesh>
-      {/* Ring finger */}
       <mesh position={[holeOffset * 0.5, holeOffset * 0.3, 0]}>
         <cylinderGeometry args={[holeRadius, holeRadius, holeDepth, 16]} />
         <meshStandardMaterial color="#050505" roughness={0.9} />
       </mesh>
-      {/* Thumb */}
       <mesh position={[0, -holeOffset * 0.4, 0]}>
-        <cylinderGeometry
-          args={[holeRadius * 1.2, holeRadius * 1.2, holeDepth, 16]}
-        />
+        <cylinderGeometry args={[holeRadius * 1.2, holeRadius * 1.2, holeDepth, 16]} />
         <meshStandardMaterial color="#050505" roughness={0.9} />
       </mesh>
     </group>

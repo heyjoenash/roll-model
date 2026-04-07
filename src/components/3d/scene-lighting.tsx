@@ -1,21 +1,16 @@
 "use client";
 
-import { Environment } from "@react-three/drei";
-
 /**
- * Studio-style lighting for bowling ball scenes.
- * Uses a locally-hosted HDRI (no CDN dependency) plus directional fill lights.
- * The HDRI gives the clearcoat material realistic reflections.
+ * Simple, stable lighting. No Environment component, no HDRI, no CDN.
+ * Just lights that work every time.
  */
 export function SceneLighting() {
   return (
     <>
-      {/* Local HDRI for realistic reflections on clearcoat */}
-      <Environment files="/hdri/studio.hdr" />
-      {/* Fill light to lift shadows */}
-      <directionalLight position={[-3, 2, -1]} intensity={0.4} color="#e8e8ff" />
-      {/* Subtle ambient */}
-      <ambientLight intensity={0.15} />
+      <ambientLight intensity={0.4} />
+      <directionalLight position={[5, 5, 3]} intensity={1.2} />
+      <directionalLight position={[-3, 2, -2]} intensity={0.5} color="#b0b0ff" />
+      <pointLight position={[0, -0.3, 0.3]} intensity={0.4} color="#8888aa" />
     </>
   );
 }
