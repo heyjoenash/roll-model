@@ -36,13 +36,17 @@ export function BowlingBall({
 
   return (
     <group ref={groupRef} rotation={[tiltRad, 0, 0]}>
-      {/* Main ball */}
+      {/* Main ball — meshPhysicalMaterial for realistic reactive resin look */}
       <mesh ref={ballRef} castShadow>
         <sphereGeometry args={[radius, 64, 64]} />
-        <meshStandardMaterial
+        <meshPhysicalMaterial
           color={color}
-          roughness={0.25}
-          metalness={0.05}
+          roughness={0.15}
+          metalness={0.0}
+          clearcoat={1.0}
+          clearcoatRoughness={0.08}
+          reflectivity={0.9}
+          envMapIntensity={1.2}
         />
       </mesh>
 

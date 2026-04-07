@@ -16,7 +16,7 @@ const SceneCanvas = dynamic(() => import("./scene-canvas"), {
 
 export function SceneContainer() {
   return (
-    <div className="relative h-[50vh] lg:h-[55vh] bg-background border-b border-border">
+    <div className="relative w-full h-full bg-background">
       <Suspense
         fallback={
           <div className="flex items-center justify-center h-full">

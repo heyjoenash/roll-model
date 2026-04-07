@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import { Callout } from "./callout";
+import { SceneCue } from "./scene-cue";
 
 export const mdxCustomComponents: MDXComponents = {
   h1: (props) => (
@@ -69,4 +70,5 @@ export const mdxCustomComponents: MDXComponents = {
   ),
   hr: () => <hr className="my-8 border-border" />,
   Callout,
+  SceneCue,
 };

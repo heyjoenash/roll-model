@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { readFile } from "fs/promises";
 import { join } from "path";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
+import remarkGfm from "remark-gfm";
 import { contentMap } from "@/lib/content-map";
 import { mdxCustomComponents } from "@/components/content/mdx-components";
 import { SceneSetter } from "./scene-setter";
@@ -31,7 +32,15 @@ export default async function LearnContentPage({ params }: Props) {
     <>
       <SceneSetter scene={entry.scene} />
       <article>
-        <MDXRemote source={source} components={mdxCustomComponents} />
+        <MDXRemote
+          source={source}
+          components={mdxCustomComponents}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm],
+            },
+          }}
+        />
       </article>
     </>
   );
