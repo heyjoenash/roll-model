@@ -1,11 +1,11 @@
 {
-  "name": "temp-scaffold",
+  "name": "roll-model",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 6200",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 6200",
     "lint": "eslint"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "leva": "0.10.1",
     "lucide-react": "1.7.0",
     "next": "16.2.2",
+    "next-mdx-remote-client": "2.1.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "rehype-autolink-headings": "7.1.0",
