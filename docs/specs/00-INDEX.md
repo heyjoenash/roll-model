@@ -23,6 +23,9 @@
 | 04 | [3D Rendering](04-3D-RENDERING.md) | CANONICAL | 2026-04-11 | Lighting, materials, post-processing, performance strategy |
 | 05 | [Content Architecture](05-CONTENT-ARCHITECTURE.md) | CANONICAL | 2026-04-11 | MDX pipeline, chapter/section map, content-to-scene binding |
 | 06 | [Deployment & CI/CD](06-DEPLOYMENT-CICD.md) | CANONICAL | 2026-04-11 | Vercel setup, GitHub Actions, build config, environment |
+| 07 | [Interaction Blueprints](07-INTERACTION-BLUEPRINTS.md) | CANONICAL | 2026-04-12 | Complete interaction design for all 53 sections — load state, Leva controls, SceneCues, animations, "aha" moments |
+| 08 | [Content Batching Handoff](08-CONTENT-BATCHING-HANDOFF.md) | CANONICAL | 2026-04-12 | Self-contained briefing for fresh context windows to write MDX content in 5-section clusters |
+| 09 | [Asset Architecture](09-ASSET-ARCHITECTURE.md) | ACTIVE | 2026-04-12 | Lane/Figure/Pins prototype options and upgrade path to high-end 3D team deliverables |
 
 ## Plans (Implementation Details)
 
