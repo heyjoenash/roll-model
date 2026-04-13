@@ -81,15 +81,33 @@ Nothing currently in progress. Last session ended at a clean state.
 
 ## What's Next (Next 3 Sessions)
 
-### Session A (recommended first): Content Batch 1 — READY TO RUN
-- **Handoff doc**: `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md` ⭐ (the insanely comprehensive atomic-task handoff)
-- **Generic playbook**: `docs/specs/08-CONTENT-BATCHING-HANDOFF.md`
+### Session A: Content Batch 1 — RUNNING
+- **Handoff doc**: `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md` ⭐
 - **Goal**: Write 5 MDX content sections in the "Custom Ball Owner Cluster"
 - **Sections**: Coverstock Types, RG & Differential, Surface Preparation, Axis Tilt, Axis Rotation
-- **Why this first**: All 5 use the existing ball component (no new asset dependencies). High-value for the primary persona. Most efficient research-to-content path.
-- **Outcome**: Site goes from 1 → 6 content sections (~12% complete)
-- **Estimated effort**: 1 focused session (~5-7 hours)
-- **How to start**: Open a fresh Claude Code session and paste the prompt from Part 12 of `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md`
+- **Status**: Currently running in another session window
+- **Outcome on completion**: Site goes from 1 → 6 content sections (~12% complete)
+
+### Session B: Lane Asset Build — READY (parallel-safe with Session A)
+- **Handoff doc**: `docs/handoffs/02-LANE-ASSET-BUILD.md` ⭐
+- **Goal**: Build the reusable Lane component (textured plane, markings, zones, highlights)
+- **Why next**: Unlocks ~22 future scenes. Highest-leverage asset. Different files than Session A — no conflict.
+- **Effort**: 4-6 focused hours
+- **How to start**: Open a fresh Claude Code session and paste the master prompt from Part 8 of the handoff doc
+
+### Session C: Oil Pattern Data — READY (parallel-safe with A and B)
+- **Handoff doc**: `docs/handoffs/03-OIL-PATTERN-DATA.md` ⭐
+- **Goal**: Build oil pattern data library (TypeScript, 11 named patterns)
+- **Why next**: Half-session. Unblocks Lane's oil overlay. Pure data, low risk.
+- **Effort**: 1.5-2 hours
+
+### Other ready handoffs
+
+- **Session D**: Scene Building Chapter 2 — `docs/handoffs/04-SCENE-BUILDING-CHAPTER-2.md` (depends on Session A finishing)
+- **Session E**: Figure (Bowler) Asset Build — `docs/handoffs/05-FIGURE-ASSET-BUILD.md` (independent)
+- **Session F**: Content Batch 2 — Foundation Cluster — `docs/handoffs/06-CONTENT-BATCH-2-FOUNDATION.md` (depends on Lane + Pins)
+
+See `docs/handoffs/README.md` for the full handoff index, parallel-safety matrix, and recommended execution order.
 
 ### Session B: Lane Asset Build
 - **Handoff doc**: `docs/specs/10-SESSION-LANE-ASSET.md`

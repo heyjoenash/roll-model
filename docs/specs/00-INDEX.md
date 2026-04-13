@@ -95,13 +95,18 @@ These live at `docs/` root (not in `specs/`) because they change often:
 
 ## Dedicated Session Handoffs
 
-`docs/handoffs/` contains **ready-to-execute** handoffs for specific upcoming sessions. Each has atomic task checklists and a copy-pasteable master prompt.
+`docs/handoffs/` contains **ready-to-execute** handoffs for specific upcoming sessions. Each has atomic task checklists and a copy-pasteable master prompt. All 6 core session types now have dedicated handoffs.
 
-| Handoff | Status | Doc |
-|---------|--------|-----|
-| 01: Content Batch 1 — Custom Ball Owner Cluster | READY | [docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md](../handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) |
+| Handoff | Type | Status | Effort | Doc |
+|---------|------|--------|--------|-----|
+| 01: Content Batch 1 — Custom Ball Owner | Content (5 sections) | READY | 5-7h | [01](../handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) |
+| 02: Lane Asset Build | 3D asset | READY | 4-6h | [02](../handoffs/02-LANE-ASSET-BUILD.md) |
+| 03: Oil Pattern Data Library | Data (TS) | READY | 1.5-2h | [03](../handoffs/03-OIL-PATTERN-DATA.md) |
+| 04: Scene Building Chapter 2 (The Ball) | Scenes (5-6 components) | READY | 4-6h | [04](../handoffs/04-SCENE-BUILDING-CHAPTER-2.md) |
+| 05: Figure (Bowler) Asset Build | 3D asset | READY | 5-7h | [05](../handoffs/05-FIGURE-ASSET-BUILD.md) |
+| 06: Content Batch 2 — Foundation Cluster | Content (4 sections) | READY | 4-6h | [06](../handoffs/06-CONTENT-BATCH-2-FOUNDATION.md) |
 
-The relationship: spec docs 08, 10, 11, 12, 13 are **generic playbooks** (the textbook). The handoffs in `docs/handoffs/` are **specific flight plans** for the next concrete sessions, derived from those playbooks. See [docs/handoffs/README.md](../handoffs/README.md) for the full index and explanation.
+The relationship: spec docs 08, 10, 11, 12, 13 are **generic playbooks** (the textbook). The handoffs in `docs/handoffs/` are **specific flight plans** for concrete sessions, derived from those playbooks with full atomic task checklists. See [docs/handoffs/README.md](../handoffs/README.md) for the full index, parallel-safety matrix, and recommended execution order.
 
 ## Other Documentation
 

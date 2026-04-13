@@ -37,19 +37,48 @@ The relationship: spec 08 is the handbook for content batching in general. `hand
 
 ## Available Handoffs
 
-| # | Handoff | Type | Status | Estimated Effort |
-|---|---------|------|--------|-----------------|
-| 01 | [Content Batch 1: Custom Ball Owner Cluster](01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) | Content writing (5 sections) | READY | ~5-7 hours |
+All 6 core session types now have dedicated atomic-task handoffs ready to execute.
 
-### Coming next (will be added as we approach them)
+| # | Handoff | Type | Status | Effort | Asset Deps | Parallel-Safe With |
+|---|---------|------|--------|--------|-----------|-------------------|
+| 01 | [Content Batch 1: Custom Ball Owner Cluster](01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) | Content (5 sections) | READY | 5-7h | None | 02, 03, 05 |
+| 02 | [Lane Asset Build](02-LANE-ASSET-BUILD.md) | 3D asset | READY | 4-6h | None | 01, 03, 05 |
+| 03 | [Oil Pattern Data Library](03-OIL-PATTERN-DATA.md) | Data (TypeScript) | READY | 1.5-2h (half) | None | 01, 02, 04, 05 |
+| 04 | [Scene Building: Chapter 2 (The Ball)](04-SCENE-BUILDING-CHAPTER-2.md) | Scenes (5-6 components) | READY | 4-6h | Ball (built); Lane optional | 02, 03, 05 |
+| 05 | [Figure (Bowler) Asset Build](05-FIGURE-ASSET-BUILD.md) | 3D asset | READY | 5-7h | None | 01, 02, 03, 04 |
+| 06 | [Content Batch 2: Foundation Cluster (Ch 1)](06-CONTENT-BATCH-2-FOUNDATION.md) | Content (4 sections) | READY | 4-6h | Lane (built), Pins (built) | 02, 03, 05 |
 
-- 02: Lane Asset Build (use `docs/specs/10-SESSION-LANE-ASSET.md` as the source — handoff version pending)
-- 03: Oil Pattern Data (use `docs/specs/12-SESSION-OIL-DATA.md` — handoff version pending)
-- 04: Scene Building — Chapter 2 (use `docs/specs/13-SESSION-SCENE-BUILDING.md` — handoff version pending)
-- 05: Content Batch 2 — Foundation Cluster (Ch 1 sections) — pending
-- 06: Figure Asset Build (use `docs/specs/11-SESSION-FIGURE-ASSET.md` — handoff version pending)
+### Recommended Execution Order
 
-The pattern: as we get close to running each session, we generate its specific atomic-checklist handoff in this folder, derived from the generic playbook in `docs/specs/`.
+Each handoff explicitly lists which other handoffs it conflicts with. Most are parallel-safe.
+
+**Highest leverage first sequence:**
+
+1. **01** — Content Batch 1 (no asset deps, ships content fast)
+2. **02** — Lane Asset Build (unlocks 22 future scenes)
+3. **03** — Oil Pattern Data (half-session, unblocks Lane oil overlay)
+4. **04** — Scene Building Ch 2 (depends on 01 finishing first; uses existing ball)
+5. **05** — Figure Asset (last reusable asset; completes M1)
+6. **06** — Content Batch 2 (depends on Lane + Pins existing)
+
+You can run sessions in parallel where the conflict matrix allows. For example, Handoff 01 (content writing) and Handoff 02 (Lane asset) touch completely different files — they can run simultaneously in two fresh Claude Code windows.
+
+### Cannot run in parallel
+
+These pairs touch the same files and would conflict:
+- 01 ↔ 06 (both touch `src/lib/content-map.ts` for content registration)
+- 04 ↔ 02 (both might touch `src/components/3d/scenes/prototype-scene.tsx`)
+- Any two content batch sessions
+
+### Future Handoffs (will be added as needed)
+
+- 07: Content Batch 3 — Ball Internals Cluster (Ch 2 sections core-design, ball-motion, weight-and-drilling)
+- 08: Scene Building Ch 1 (uses Lane + Pins)
+- 09: Content Batch 4 — Strike Physics Cluster (Ch 8)
+- 10: Scene Building Ch 8 (Strike chapter — needs Pin Action animation)
+- ...
+
+These will be created when their dependencies are ready and you're approaching them in the execution order.
 
 ---
 
