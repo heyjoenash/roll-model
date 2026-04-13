@@ -60,6 +60,7 @@ If you don't know which category something belongs in, **read this entire README
 **Naming convention**: `{number}-{KEBAB-CASE-NAME}.md`. Numbers reflect the **suggested execution order**, not the creation order. Numbers don't change once assigned.
 
 **Current contents**:
+- `00-MASTER-ROADMAP.md` ⭐ — **THE complete list of all 34 sessions needed for v1.0**, organized by milestone, with status (READY/STUB), dependencies, and effort estimates. Read this to understand the full path.
 - `README.md` — folder index + parallel-safety matrix + execution order
 - `01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md` — 5 MDX sections (Ch 2 + Ch 5)
 - `02-LANE-ASSET-BUILD.md` — Lane reusable asset (textured plane)
@@ -67,6 +68,8 @@ If you don't know which category something belongs in, **read this entire README
 - `04-SCENE-BUILDING-CHAPTER-2.md` — Chapter 2 scene components
 - `05-FIGURE-ASSET-BUILD.md` — Bowler figure (primitive scientific-diagram)
 - `06-CONTENT-BATCH-2-FOUNDATION.md` — Chapter 1 MDX content (4 sections)
+
+**Total handoffs needed for v1.0**: 34 (6 READY, 28 STUB). STUBs are documented in 00-MASTER-ROADMAP.md and get promoted to full handoffs as we approach them.
 
 **Update frequency**: Each file is mostly write-once. After the session runs, the handoff stays as historical record. Don't edit a handoff that's already been executed.
 

@@ -12,7 +12,8 @@
 **Live**: roll-model.vercel.app
 **Repo**: github.com/heyjoenash/roll-model
 **Content sections shipped**: 1 of 53 (Rev Rate)
-**Next session**: Either (a) Content Batch 1 via doc 08, or (b) Lane Asset via doc 10
+**Total sessions to v1.0**: 34 (6 READY, 28 STUB) — see [`docs/handoffs/00-MASTER-ROADMAP.md`](handoffs/00-MASTER-ROADMAP.md) for the complete list
+**Next session**: Either (a) Content Batch 1 via handoff 01, or (b) Lane Asset via handoff 02
 
 ---
 

@@ -5,6 +5,14 @@
 
 ---
 
+## ⭐ START HERE — The Master Roadmap
+
+**[00-MASTER-ROADMAP.md](00-MASTER-ROADMAP.md)** lists EVERY session needed to ship Roll Model v1.0 — all 34 of them, organized by milestone, with status (READY/STUB), dependencies, and effort estimates. Read this first to understand the full path to v1.0 and where the current handoffs fit.
+
+**Current coverage**: 6 sessions have full atomic handoffs (READY). 28 sessions are documented as STUBs in the roadmap and will be promoted to full handoffs as we approach them. Nothing is missing — every session is accounted for.
+
+---
+
 ## What This Folder Is
 
 `docs/specs/` contains **reference handoff docs** — generic playbooks like "how to write any content batch" or "how to build any scene." They're the textbook.
