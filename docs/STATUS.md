@@ -11,9 +11,9 @@
 **Milestone**: M0 complete (Foundation), M1 in progress (Asset Foundation)
 **Live**: roll-model.vercel.app
 **Repo**: github.com/heyjoenash/roll-model
-**Content sections shipped**: 1 of 53 (Rev Rate)
+**Content sections shipped**: 6 of 53 (Rev Rate + Custom Ball Owner cluster: Coverstock Types, RG & Differential, Surface Preparation, Axis Tilt, Axis Rotation)
 **Total sessions to v1.0**: 34 (6 READY, 28 STUB) — see [`docs/handoffs/00-MASTER-ROADMAP.md`](handoffs/00-MASTER-ROADMAP.md) for the complete list
-**Next session**: Either (a) Content Batch 1 via handoff 01, or (b) Lane Asset via handoff 02
+**Next session**: Session B — Lane Asset via handoff 02 (Session A complete)
 
 ---
 
@@ -62,6 +62,11 @@
 
 ### Content Sections Written
 - ✅ **Rev Rate** (Ch 5.2) — `content/the-release/rev-rate.mdx`, 105 lines
+- ✅ **Coverstock Types** (Ch 2.1) — `content/the-ball/coverstock-types.mdx`, 100 lines
+- ✅ **RG & Differential** (Ch 2.3) — `content/the-ball/rg-and-differential.mdx`, 110 lines
+- ✅ **Surface Preparation** (Ch 2.5) — `content/the-ball/surface-preparation.mdx`, 90 lines
+- ✅ **Axis Tilt** (Ch 5.3) — `content/the-release/axis-tilt.mdx`, 90 lines
+- ✅ **Axis Rotation** (Ch 5.4) — `content/the-release/axis-rotation.mdx`, 90 lines
 - ✅ **Prototype Sandbox** (dev only, not production content)
 
 ### Documentation
@@ -82,21 +87,14 @@ Nothing currently in progress. Last session ended at a clean state.
 
 ## What's Next (Next 3 Sessions)
 
-### Session A: Content Batch 1 — RUNNING
-- **Handoff doc**: `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md` ⭐
-- **Goal**: Write 5 MDX content sections in the "Custom Ball Owner Cluster"
-- **Sections**: Coverstock Types, RG & Differential, Surface Preparation, Axis Tilt, Axis Rotation
-- **Status**: Currently running in another session window
-- **Outcome on completion**: Site goes from 1 → 6 content sections (~12% complete)
-
-### Session B: Lane Asset Build — READY (parallel-safe with Session A)
+### Session B: Lane Asset Build — TOP PRIORITY (READY)
 - **Handoff doc**: `docs/handoffs/02-LANE-ASSET-BUILD.md` ⭐
 - **Goal**: Build the reusable Lane component (textured plane, markings, zones, highlights)
-- **Why next**: Unlocks ~22 future scenes. Highest-leverage asset. Different files than Session A — no conflict.
+- **Why next**: Unlocks ~22 future scenes. Highest-leverage asset now that Session A has shipped.
 - **Effort**: 4-6 focused hours
 - **How to start**: Open a fresh Claude Code session and paste the master prompt from Part 8 of the handoff doc
 
-### Session C: Oil Pattern Data — READY (parallel-safe with A and B)
+### Session C: Oil Pattern Data — READY (parallel-safe with Session B)
 - **Handoff doc**: `docs/handoffs/03-OIL-PATTERN-DATA.md` ⭐
 - **Goal**: Build oil pattern data library (TypeScript, 11 named patterns)
 - **Why next**: Half-session. Unblocks Lane's oil overlay. Pure data, low risk.
@@ -104,7 +102,7 @@ Nothing currently in progress. Last session ended at a clean state.
 
 ### Other ready handoffs
 
-- **Session D**: Scene Building Chapter 2 — `docs/handoffs/04-SCENE-BUILDING-CHAPTER-2.md` (depends on Session A finishing)
+- **Session D**: Scene Building Chapter 2 — `docs/handoffs/04-SCENE-BUILDING-CHAPTER-2.md` (Session A complete, now unblocked to build scenes for the 5 new content sections)
 - **Session E**: Figure (Bowler) Asset Build — `docs/handoffs/05-FIGURE-ASSET-BUILD.md` (independent)
 - **Session F**: Content Batch 2 — Foundation Cluster — `docs/handoffs/06-CONTENT-BATCH-2-FOUNDATION.md` (depends on Lane + Pins)
 - **Conductor (parallel role)**: `docs/handoffs/07-CONDUCTOR-MAIN-AGENT.md` — A continuous orchestrator role that runs in its own window in parallel with any other sessions. Builds sub-features, promotes STUBs, updates STATUS, fixes bugs, maintains docs. **Recommended pattern**: dedicate one window to the conductor whenever you have other sessions running, so it can keep STATUS updated and build sub-features in the background.
@@ -138,11 +136,11 @@ None. The project is unblocked and ready to advance. Each upcoming session is in
 ## Recent Activity (Last 5 Commits)
 
 ```
+f64e448  content: chapter 2 ball + chapter 5 release — custom ball owner cluster (5 sections)
 a483abc  docs: README, LICENSE, and session handoffs for all upcoming session types
 23ae8b0  docs: expand content batching handoff to comprehensive v2 briefing
 73634ca  feat: pins asset + prototype sandbox at /learn/prototypes
 dbeb908  docs: interaction blueprints, content handoff, asset architecture
-4bdd2ab  feat: premium 3D visual fidelity + comprehensive spec documentation
 ```
 
 ---
@@ -175,7 +173,7 @@ npm run build
 
 # Content map current
 cat src/lib/content-map.ts | grep -c '":'
-# Should equal: number of content entries currently registered (currently 2: rev-rate + prototypes)
+# Should equal: number of content entries currently registered (currently 7: rev-rate + 5 custom-ball-owner cluster sections + prototypes)
 
 # Spec docs count
 ls docs/specs/*.md | wc -l
