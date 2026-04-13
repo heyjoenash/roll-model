@@ -107,6 +107,7 @@ Nothing currently in progress. Last session ended at a clean state.
 - **Session D**: Scene Building Chapter 2 — `docs/handoffs/04-SCENE-BUILDING-CHAPTER-2.md` (depends on Session A finishing)
 - **Session E**: Figure (Bowler) Asset Build — `docs/handoffs/05-FIGURE-ASSET-BUILD.md` (independent)
 - **Session F**: Content Batch 2 — Foundation Cluster — `docs/handoffs/06-CONTENT-BATCH-2-FOUNDATION.md` (depends on Lane + Pins)
+- **Conductor (parallel role)**: `docs/handoffs/07-CONDUCTOR-MAIN-AGENT.md` — A continuous orchestrator role that runs in its own window in parallel with any other sessions. Builds sub-features, promotes STUBs, updates STATUS, fixes bugs, maintains docs. **Recommended pattern**: dedicate one window to the conductor whenever you have other sessions running, so it can keep STATUS updated and build sub-features in the background.
 
 See `docs/handoffs/README.md` for the full handoff index, parallel-safety matrix, and recommended execution order.
 

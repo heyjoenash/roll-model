@@ -68,8 +68,11 @@ If you don't know which category something belongs in, **read this entire README
 - `04-SCENE-BUILDING-CHAPTER-2.md` — Chapter 2 scene components
 - `05-FIGURE-ASSET-BUILD.md` — Bowler figure (primitive scientific-diagram)
 - `06-CONTENT-BATCH-2-FOUNDATION.md` — Chapter 1 MDX content (4 sections)
+- `07-CONDUCTOR-MAIN-AGENT.md` ⭐ — **Continuous orchestrator role** (NOT a single-purpose session). Re-invokable in its own window in parallel with other sessions. Builds sub-features, promotes STUBs, updates STATUS, fixes bugs, maintains docs. The "everything else" role.
 
-**Total handoffs needed for v1.0**: 34 (6 READY, 28 STUB). STUBs are documented in 00-MASTER-ROADMAP.md and get promoted to full handoffs as we approach them.
+**Important distinction**: Handoffs 01-06 are SINGLE-PURPOSE flight plans for one specific deliverable each. Handoff 07 is a CONTINUOUS role you re-invoke as needed. The conductor role is the connective tissue between dedicated sessions.
+
+**Total handoffs needed for v1.0**: 34 (6 READY, 28 STUB) for the dedicated sessions. The conductor (07) handles the work that doesn't fit any of those 34 — STUBs are promoted by the conductor as we approach them.
 
 **Update frequency**: Each file is mostly write-once. After the session runs, the handoff stays as historical record. Don't edit a handoff that's already been executed.
 

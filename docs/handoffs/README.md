@@ -45,16 +45,17 @@ The relationship: spec 08 is the handbook for content batching in general. `hand
 
 ## Available Handoffs
 
-All 6 core session types now have dedicated atomic-task handoffs ready to execute.
+7 handoffs now exist: 6 single-purpose session flight plans (01-06) and 1 continuous orchestrator role (07).
 
 | # | Handoff | Type | Status | Effort | Asset Deps | Parallel-Safe With |
 |---|---------|------|--------|--------|-----------|-------------------|
-| 01 | [Content Batch 1: Custom Ball Owner Cluster](01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) | Content (5 sections) | READY | 5-7h | None | 02, 03, 05 |
-| 02 | [Lane Asset Build](02-LANE-ASSET-BUILD.md) | 3D asset | READY | 4-6h | None | 01, 03, 05 |
-| 03 | [Oil Pattern Data Library](03-OIL-PATTERN-DATA.md) | Data (TypeScript) | READY | 1.5-2h (half) | None | 01, 02, 04, 05 |
-| 04 | [Scene Building: Chapter 2 (The Ball)](04-SCENE-BUILDING-CHAPTER-2.md) | Scenes (5-6 components) | READY | 4-6h | Ball (built); Lane optional | 02, 03, 05 |
-| 05 | [Figure (Bowler) Asset Build](05-FIGURE-ASSET-BUILD.md) | 3D asset | READY | 5-7h | None | 01, 02, 03, 04 |
-| 06 | [Content Batch 2: Foundation Cluster (Ch 1)](06-CONTENT-BATCH-2-FOUNDATION.md) | Content (4 sections) | READY | 4-6h | Lane (built), Pins (built) | 02, 03, 05 |
+| 01 | [Content Batch 1: Custom Ball Owner Cluster](01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) | Content (5 sections) | READY | 5-7h | None | 02, 03, 05, **07** |
+| 02 | [Lane Asset Build](02-LANE-ASSET-BUILD.md) | 3D asset | READY | 4-6h | None | 01, 03, 05, **07** |
+| 03 | [Oil Pattern Data Library](03-OIL-PATTERN-DATA.md) | Data (TypeScript) | READY | 1.5-2h (half) | None | 01, 02, 04, 05, **07** |
+| 04 | [Scene Building: Chapter 2 (The Ball)](04-SCENE-BUILDING-CHAPTER-2.md) | Scenes (5-6 components) | READY | 4-6h | Ball (built); Lane optional | 02, 03, 05, **07** |
+| 05 | [Figure (Bowler) Asset Build](05-FIGURE-ASSET-BUILD.md) | 3D asset | READY | 5-7h | None | 01, 02, 03, 04, **07** |
+| 06 | [Content Batch 2: Foundation Cluster (Ch 1)](06-CONTENT-BATCH-2-FOUNDATION.md) | Content (4 sections) | READY | 4-6h | Lane (built), Pins (built) | 02, 03, 05, **07** |
+| **07** | **[Conductor / Main Agent (continuous orchestrator)](07-CONDUCTOR-MAIN-AGENT.md)** | **Continuous role** | **READY** | **Variable (~2-7h per invocation)** | **None** | **All others (with parallel-safety rules)** |
 
 ### Recommended Execution Order
 
@@ -77,6 +78,18 @@ These pairs touch the same files and would conflict:
 - 01 ↔ 06 (both touch `src/lib/content-map.ts` for content registration)
 - 04 ↔ 02 (both might touch `src/components/3d/scenes/prototype-scene.tsx`)
 - Any two content batch sessions
+
+### About Handoff 07 (Conductor / Main Agent)
+
+Handoff 07 is fundamentally different from 01-06. It's a **continuous orchestrator role**, not a single-purpose flight plan. You re-invoke it as many times as needed across the project lifecycle.
+
+**What it does**: Builds sub-features that don't fit other handoffs (Lane oil overlay shader, BallPath component, Pin Action animation, Scorecard, Ball cutaway/coverstock/axis-arrow enhancements), promotes STUBs to full handoffs, updates STATUS.md after sessions ship, fixes bugs, validates cross-session integration, maintains documentation hygiene, refactors infrastructure as the project grows.
+
+**When to invoke**: After any other session ships, when you want sub-features built in parallel, when STUBs need promotion, when documentation needs reconciling, or roughly every 3-5 dedicated sessions for general project hygiene.
+
+**Parallel safety**: 07 is parallel-safe with ALL other sessions IF the conductor follows the parallel-safety matrix in Part 4 of `07-CONDUCTOR-MAIN-AGENT.md`. The conductor enforces file ownership rules and never touches files an active session is editing.
+
+**Recommended pattern**: Run a continuous conductor session in one window, with dedicated session(s) running in other windows. The conductor handles the connective tissue while the dedicated sessions ship their specific deliverables.
 
 ### Future Handoffs (will be added as needed)
 

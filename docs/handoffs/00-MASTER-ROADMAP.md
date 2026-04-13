@@ -209,6 +209,33 @@ When you're ready to run a STUB session, it gets PROMOTED to a full atomic-task 
 
 ---
 
+## Conductor Tasks (Handled by Handoff 07 in a Parallel Window)
+
+Beyond the 34 sessions in the milestone roadmap above, there's a category of work that doesn't fit any single-purpose session handoff: sub-features, STUB promotions, status updates, refactoring, bug fixes, and documentation hygiene. **All of this is owned by Handoff 07 — the Conductor / Main Agent role.**
+
+The conductor runs as a CONTINUOUS role in its own dedicated context window, in parallel with whichever single-purpose sessions (01-06) are active. It handles the connective tissue between dedicated sessions.
+
+**See `07-CONDUCTOR-MAIN-AGENT.md`** for the full conductor role definition, sub-feature playbooks (8 of them: A-H), parallel-safety matrix, decision tree, and master prompt.
+
+The conductor's playbook menu:
+
+| Playbook | Task | Effort | Trigger |
+|----------|------|--------|---------|
+| A | Lane Oil Overlay Shader | 3-4h | After Handoffs 02 + 03 ship |
+| B | BallPath Component | 3-4h | Before M6.6 |
+| C | Pin Action Animation | 5-7h | Before M3.3 (BLOCKING) |
+| D1 | Ball Coverstock Material Variants | 2h | Before M2.2 finishes |
+| D2 | Ball Cutaway Visualization | 2h | Before Core Design scene |
+| D3 | Ball Axis Arrow Visualization | 1.5h | Before Axis Rotation scene |
+| E | Scorecard Component | 3-4h | Before M2.4 (Scene Building Ch 1) |
+| F | Scene-Switcher Refactor | 3-4h | When scene count > 15 (around M4) |
+| G | STATUS.md + Roadmap Update | 10-15min | After ANY session ships |
+| H | STUB → Full Handoff Promotion | 1-2h | When a STUB's dependencies are met |
+
+**Promotion process replaced**: The promotion process described elsewhere in this roadmap is now formally Playbook H of the conductor handoff. When you want a STUB promoted to a full handoff, invoke the conductor (Handoff 07) and tell it which entry to promote.
+
+---
+
 ## Sub-Features That May Need Their Own Handoffs
 
 Some scene-building sessions have sub-feature dependencies that aren't reusable assets. These may need their own mini-handoffs:
