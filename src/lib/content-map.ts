@@ -21,6 +21,13 @@ export const contentMap: Record<string, ContentEntry> = {
     scene: "rev-rate",
     description: "How fast the bowling ball spins and why it matters",
   },
+  prototypes: {
+    title: "Prototype Sandbox",
+    chapter: "Development",
+    chapterNumber: 0,
+    scene: "prototype",
+    description: "Asset prototype sandbox — ball + pin deck together",
+  },
 };
 
 export const chapters: Chapter[] = [

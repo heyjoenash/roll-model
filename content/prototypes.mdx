@@ -1,0 +1,39 @@
+# Prototype Sandbox
+
+This is a development sandbox showing the early 3D asset prototypes running in one scene. The ball in the foreground is the existing Rev Rate asset. The pin deck behind it is built with drei's `Lathe` geometry using a USBC-proportioned profile — 10 pins in a proper equilateral triangle at 12-inch spacing.
+
+Use the Leva panel to explore pin states, or click the buttons below to see interaction patterns that will power future content sections.
+
+<Callout type="note">
+This page is for prototyping only. Production content lives under `/learn/[chapter]/[section]`.
+</Callout>
+
+## What the ball touches
+
+On a perfect strike, the ball only directly contacts 4 of the 10 pins. The other 6 fall from pin-to-pin collisions — the chain reaction is where most of the action happens. This toggle highlights the 4 pins the ball actually touches.
+
+<SceneCue
+  label="See it: Ball's strike path (pins 1-3-5-9)"
+  description="The four pins the ball directly touches. All others are chain reactions."
+  params={{ showStrikePath: true }}
+/>
+
+## Row by row
+
+The 10-pin arrangement is an equilateral triangle in 4 rows — 1, 2, 3, 4 pins respectively. Pin 1 is the head pin; 7 and 10 are the corner pins in the back row.
+
+<SceneCue
+  label="See it: Back row (pins 7-8-9-10)"
+  description="The back row including the corner pins"
+  params={{ highlightRow: "Row 4", showStrikePath: false }}
+/>
+
+<SceneCue
+  label="See it: Middle row (pins 4-5-6)"
+  description="The center of the triangle"
+  params={{ highlightRow: "Row 3", showStrikePath: false }}
+/>
+
+## What's next
+
+The pin asset is now a swappable module at `src/components/3d/assets/pins/`. When a high-end 3D team delivers proper pin models, only the index file changes — every scene that imports from `@/components/3d/assets/pins` gets upgraded automatically. Same pattern will apply to the Lane, Figure, and Ball assets.
