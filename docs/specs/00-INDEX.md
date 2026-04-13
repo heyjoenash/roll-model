@@ -93,6 +93,16 @@ These live at `docs/` root (not in `specs/`) because they change often:
 | **[STATUS.md](../STATUS.md)** | Current state dashboard — what's done, in progress, next 3 sessions, blockers, recent commits. **Read this first when starting a new session.** | Every session |
 | **[GLOSSARY.md](../GLOSSARY.md)** | Canonical definitions for every bowling term used in content. Single source of truth for jargon. | When new terms appear |
 
+## Dedicated Session Handoffs
+
+`docs/handoffs/` contains **ready-to-execute** handoffs for specific upcoming sessions. Each has atomic task checklists and a copy-pasteable master prompt.
+
+| Handoff | Status | Doc |
+|---------|--------|-----|
+| 01: Content Batch 1 — Custom Ball Owner Cluster | READY | [docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md](../handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md) |
+
+The relationship: spec docs 08, 10, 11, 12, 13 are **generic playbooks** (the textbook). The handoffs in `docs/handoffs/` are **specific flight plans** for the next concrete sessions, derived from those playbooks. See [docs/handoffs/README.md](../handoffs/README.md) for the full index and explanation.
+
 ## Other Documentation
 
 - **`docs/SESSION-KICKOFF.md`** — Original project brief and vision document. Authoritative on intent, superseded on technical details by the numbered specs and the PRD.

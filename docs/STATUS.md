@@ -81,13 +81,15 @@ Nothing currently in progress. Last session ended at a clean state.
 
 ## What's Next (Next 3 Sessions)
 
-### Session A (recommended first): Content Batch 1
-- **Handoff doc**: `docs/specs/08-CONTENT-BATCHING-HANDOFF.md`
+### Session A (recommended first): Content Batch 1 — READY TO RUN
+- **Handoff doc**: `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md` ⭐ (the insanely comprehensive atomic-task handoff)
+- **Generic playbook**: `docs/specs/08-CONTENT-BATCHING-HANDOFF.md`
 - **Goal**: Write 5 MDX content sections in the "Custom Ball Owner Cluster"
 - **Sections**: Coverstock Types, RG & Differential, Surface Preparation, Axis Tilt, Axis Rotation
 - **Why this first**: All 5 use the existing ball component (no new asset dependencies). High-value for the primary persona. Most efficient research-to-content path.
 - **Outcome**: Site goes from 1 → 6 content sections (~12% complete)
 - **Estimated effort**: 1 focused session (~5-7 hours)
+- **How to start**: Open a fresh Claude Code session and paste the prompt from Part 12 of `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md`
 
 ### Session B: Lane Asset Build
 - **Handoff doc**: `docs/specs/10-SESSION-LANE-ASSET.md`
@@ -191,8 +193,9 @@ For a fresh session that needs a 30-second orientation:
 | What port does the dev server run on? | 6200, ALWAYS |
 | What's the spec index? | `docs/specs/00-INDEX.md` |
 | What's the PRD? | `docs/specs/14-PRD.md` |
+| Where are the dedicated handoffs? | `docs/handoffs/` (start with `01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md`) |
 | What's the voice reference for content? | `content/the-release/rev-rate.mdx` |
-| How do I write content? | Read `docs/specs/08-CONTENT-BATCHING-HANDOFF.md` |
-| How do I build an asset? | Read the matching session handoff doc (10, 11, or 12) |
+| How do I write content? | Read `docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md` (specific) or `docs/specs/08-CONTENT-BATCHING-HANDOFF.md` (generic) |
+| How do I build an asset? | Read the matching session handoff doc in `docs/specs/` (10, 11, or 12) |
 | How do I build scenes? | Read `docs/specs/13-SESSION-SCENE-BUILDING.md` |
 | Where do bowling terms live? | `docs/GLOSSARY.md` |

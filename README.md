@@ -81,9 +81,10 @@ roll-model/
 
 1. **[docs/STATUS.md](docs/STATUS.md)** — Current state dashboard. What's done, what's next, what's blocking.
 2. **[docs/specs/14-PRD.md](docs/specs/14-PRD.md)** — The product requirements doc. Vision, personas, requirements, milestones, definition of done. Every session works toward something in here.
-3. **[docs/specs/00-INDEX.md](docs/specs/00-INDEX.md)** — Master index of all specs and session handoffs.
+3. **[docs/handoffs/README.md](docs/handoffs/README.md)** — The dedicated session handoffs folder. Pick the next handoff and follow its master prompt.
+4. **[docs/specs/00-INDEX.md](docs/specs/00-INDEX.md)** — Master index of all reference specs.
 
-Then the relevant session handoff doc for the work you're about to do (see below).
+**Next session ready to run**: [Content Batch 1 — Custom Ball Owner Cluster](docs/handoffs/01-CONTENT-BATCH-1-CUSTOM-BALL-OWNER.md). Open a fresh Claude Code session and paste the master prompt from Part 12 of that doc.
 
 ### Reference Specs
 
