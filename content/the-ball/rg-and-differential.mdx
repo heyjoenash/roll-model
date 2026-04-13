@@ -1,0 +1,110 @@
+# RG & Differential
+
+Two numbers on your ball's spec sheet describe everything happening inside it: RG (radius of gyration) and differential. RG tells you how quickly your ball wants to start spinning. Differential tells you how much it will wander — flare — as it travels. Together, they describe the physics of the core, and the core decides when your ball reads the lane and how strongly it reacts when it does.
+
+<Callout type="key">
+Think of a figure skater. Arms pulled in, they spin fast (low RG). Arms stretched out, they spin slowly (high RG). A bowling ball works exactly the same way — mass near the center revs up early, mass near the shell revs up late. That one analogy unlocks both numbers.
+</Callout>
+
+## Why These Two Numbers Matter
+
+Your coverstock decides how your ball grabs the lane. But grabbing the lane doesn't matter if the ball isn't rolling yet — or if it's already rolled out. RG and differential are the timing and shape controls. They decide when your ball starts hooking and how much track it covers while doing it.
+
+Every USBC-legal ball falls inside a narrow window:
+
+- **RG** is legal between **2.460 and 2.800 inches**. Most modern balls sit between 2.48 and 2.57.
+- **Differential** is legal between **0.010 and 0.060 inches**. Most modern balls sit between 0.030 and 0.055.
+
+Those ranges look small — a few hundredths of an inch — but they're big enough to turn a ball that hooks at 30 feet into a ball that hooks at 45 feet.
+
+<SceneCue
+  label="See it: Low RG — mass near center"
+  description="The ball revs up visibly fast — early hook potential."
+  params={{ rgValue: 2.460, showMassHeatmap: true }}
+/>
+
+Low RG concentrates the ball's mass near the geometric center. The moment it encounters friction, it starts spinning efficiently because its mass doesn't have to travel far from the axis. A low-RG ball revs up early, reads the midlane early, and starts hooking early. If your pro shop hands you a ball with an RG of 2.48, expect an early, strong, continuous shape.
+
+<SceneCue
+  label="See it: High RG — mass near shell"
+  description="The ball takes longer to rev up — later hook, more skid."
+  params={{ rgValue: 2.800, showMassHeatmap: true }}
+/>
+
+High RG pushes the mass outward, closer to the shell. Just like a skater extending their arms, the ball fights rotation a little harder at first. It skids longer through the oil, saves its energy for the backend, and then releases it all at once. High-RG balls are the classic "long and strong" option for faster bowlers or drier conditions.
+
+The difference between a 2.48 RG ball and a 2.57 RG ball is only about a tenth of an inch on the spec sheet, but on the lane it can mean ten feet of difference in where the ball starts to hook.
+
+## Classification Ranges
+
+Most balls fall into one of three rough RG buckets. Your pro shop's description of a ball's intended shape usually tracks this table closely:
+
+| RG Range (inches) | Classification | Behavior |
+|-------------------|---------------|----------|
+| 2.460 – 2.500 | Low | Revs early, short skid, earliest hook |
+| 2.510 – 2.540 | Medium | Balanced — the most common "benchmark" range |
+| 2.550 – 2.800 | High | Late rev, long skid, stores energy for the backend |
+
+Two balls with very different RG values can feel like completely different pieces of equipment even if their coverstocks are identical. This is why "just buy the popular ball" usually fails — the RG has to match how fast you throw it.
+
+<Callout type="pro-tip">
+If you're a newer bowler with a moderate ball speed, a benchmark medium-RG ball (somewhere around 2.50–2.53) is almost always a better starting point than an aggressive low-RG ball. A ball that reads the lane a half-second earlier than your timing can handle will hook to the left of the pocket before you figure out what's happening.
+</Callout>
+
+## Differential and Track Flare
+
+Differential is the second spec, and it measures something subtler: how much the ball's axis of rotation shifts during flight. Every time the ball revolves, the spot that touches the lane is a tiny bit different from the spot on the previous rotation. That migration is called **track flare**, and the visible evidence is the set of parallel oil rings you see on your ball after a shot.
+
+<SceneCue
+  label="See it: High differential = massive flare"
+  description="Track flare rings spread wide apart on the ball surface."
+  params={{ differential: 0.060, showFlareRings: true }}
+/>
+
+Why does flare matter? Because every new ring contacts **fresh** coverstock to the lane — surface that hasn't touched oil yet on this shot. Fresh coverstock grips harder than oil-soaked coverstock. The more flare, the more grip, the more hook.
+
+The flare width is literally measurable. A very-low-differential ball might show about an inch of flare from the first ring to the last. A maxed-out 0.060-differential ball might show six or seven inches of separation between the innermost and outermost rings. If you finish a game and look at your ball, you can read its differential with your eyes — wide-spaced rings mean aggressive flare, tight rings mean the opposite.
+
+| Differential Range | Flare | Motion |
+|--------------------|-------|--------|
+| 0.010 – 0.025 | Low | Minimal migration; smooth, stable, mild hook |
+| 0.025 – 0.045 | Medium | Balanced flare; controlled hook shape |
+| 0.045 – 0.060 | High | 5–6 inches of flare rings; aggressive, sharp hook |
+
+A low-differential ball might show a single thin ring of oil after a shot. A 0.055-differential ball might show a band of parallel rings an inch or two apart, fanning from the fingers around the ball. That visual fan is your differential at work.
+
+## Putting It Together
+
+RG and differential are not the same number. They answer two different questions:
+
+- **RG answers "when?"** — when will the ball start hooking?
+- **Differential answers "how much?"** — how big a total hook is available to be produced?
+
+They combine into four useful personality types:
+
+| RG + Differential | Combined Behavior | Good For |
+|-------------------|-------------------|----------|
+| Low RG + High Diff | Early, strong, continuous hook | Heavier oil, higher ball speed |
+| Low RG + Low Diff | Early but controlled arc | Medium oil, control-oriented players |
+| High RG + High Diff | Long skid then explosive backend | Medium-light oil, rev-dominant bowlers |
+| High RG + Low Diff | Long, smooth, gentle arc | Dry lanes, controlled shots |
+
+When a pro shop recommends a ball, they're mostly navigating this 2×2. Ask them which quadrant they think fits your hand, and you'll get a lot more information out of the conversation than asking which brand is "best."
+
+There's also a third, subtler spec you may see listed on asymmetric-core balls: intermediate differential. That one is strictly for balls with asymmetric cores, and it measures how "uneven" the core is across its three axes. A higher intermediate differential produces a sharper, more defined breakpoint. For your first custom ball, you don't need to worry about it — but you'll see the number listed on a spec sheet for asymmetric balls, so it helps to know what it is.
+
+<Callout type="warning">
+RG is NOT the ball's weight. Every USBC-legal ball weighs the same amount (up to 16 lb maximum), regardless of RG. RG only describes where that fixed weight is distributed inside the ball. Two 15-pound balls with RGs of 2.48 and 2.68 weigh exactly the same — they just store their mass in different places.
+</Callout>
+
+## What to Focus on as a Learner
+
+You don't need to memorize RG values. You need to read two numbers on your ball's box and understand what they imply:
+
+1. **Find your ball's RG and differential on the manufacturer's website or box.** Both numbers are almost always published alongside the coverstock type and the core name.
+2. **Classify your ball into one of the four quadrants above.** That's your ball's intended personality. When you throw it on the lane, you should see a shape that roughly matches the description in the right column.
+3. **Compare your ball to your speed and rev rate.** A slower-speed bowler with a high-RG ball is going to struggle with the ball rolling out before the pocket. A fast-speed bowler with a low-RG ball is going to struggle with the ball hooking too early. Mismatches are common, and fixable — with surface adjustments or a different ball.
+
+The figure skater image is the single most useful mental model in bowling equipment. Arms in, spin fast. Arms out, spin slow. Every time you see an RG value, picture the skater. The physics becomes obvious, and the spec sheet stops looking like gibberish.
+
+Once you're comfortable reading RG and differential, you'll find yourself understanding ball reviews on YouTube and forums that used to sound like another language. "2.48 RG, 0.055 diff, asymmetric core" is no longer a pile of numbers — it's a short, clear description of a ball that revs up early, flares aggressively, and turns sharply. That's the promise of learning the specs: the whole conversation around bowling equipment stops feeling like insider jargon.

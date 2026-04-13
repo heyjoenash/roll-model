@@ -14,12 +14,47 @@ export interface Chapter {
 }
 
 export const contentMap: Record<string, ContentEntry> = {
+  "the-ball/coverstock-types": {
+    title: "Coverstock Types",
+    chapter: "The Ball",
+    chapterNumber: 2,
+    scene: "coverstock-types",
+    description: "What the ball's surface is made of — and why it controls everything else",
+  },
+  "the-ball/rg-and-differential": {
+    title: "RG & Differential",
+    chapter: "The Ball",
+    chapterNumber: 2,
+    scene: "rg-differential",
+    description: "How mass is distributed inside your ball — and why it matters",
+  },
+  "the-ball/surface-preparation": {
+    title: "Surface Preparation",
+    chapter: "The Ball",
+    chapterNumber: 2,
+    scene: "surface-prep",
+    description: "The cheapest, fastest way to change how your ball reacts",
+  },
   "the-release/rev-rate": {
     title: "Rev Rate (Revolutions Per Minute)",
     chapter: "The Release",
     chapterNumber: 5,
     scene: "rev-rate",
     description: "How fast the bowling ball spins and why it matters",
+  },
+  "the-release/axis-tilt": {
+    title: "Axis Tilt",
+    chapter: "The Release",
+    chapterNumber: 5,
+    scene: "axis-tilt",
+    description: "How much of your ball actually touches the lane — and why it matters",
+  },
+  "the-release/axis-rotation": {
+    title: "Axis Rotation",
+    chapter: "The Release",
+    chapterNumber: 5,
+    scene: "axis-rotation",
+    description: "The direction of your spin — and why it creates hook",
   },
   prototypes: {
     title: "Prototype Sandbox",
