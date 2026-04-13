@@ -77,7 +77,15 @@ roll-model/
 
 ## Documentation
 
-Start with `docs/specs/00-INDEX.md` for the master index of all specs. The most important docs:
+**If you're starting a new session, read these in order:**
+
+1. **[docs/STATUS.md](docs/STATUS.md)** — Current state dashboard. What's done, what's next, what's blocking.
+2. **[docs/specs/14-PRD.md](docs/specs/14-PRD.md)** — The product requirements doc. Vision, personas, requirements, milestones, definition of done. Every session works toward something in here.
+3. **[docs/specs/00-INDEX.md](docs/specs/00-INDEX.md)** — Master index of all specs and session handoffs.
+
+Then the relevant session handoff doc for the work you're about to do (see below).
+
+### Reference Specs
 
 | Doc | What |
 |-----|------|
@@ -86,6 +94,7 @@ Start with `docs/specs/00-INDEX.md` for the master index of all specs. The most 
 | [05-CONTENT-ARCHITECTURE](docs/specs/05-CONTENT-ARCHITECTURE.md) | MDX pipeline, full chapter/section map |
 | [07-INTERACTION-BLUEPRINTS](docs/specs/07-INTERACTION-BLUEPRINTS.md) | Complete interaction design for all 53 sections |
 | [09-ASSET-ARCHITECTURE](docs/specs/09-ASSET-ARCHITECTURE.md) | Swappable asset pattern + Lane/Figure/Pins prototypes |
+| [GLOSSARY](docs/GLOSSARY.md) | Canonical bowling terminology |
 
 ### Session Handoff Docs (for fresh Claude Code context windows)
 

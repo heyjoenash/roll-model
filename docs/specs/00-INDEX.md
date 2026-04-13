@@ -29,6 +29,7 @@ These describe HOW the system works. Read for context, don't modify casually.
 | 06 | [Deployment & CI/CD](06-DEPLOYMENT-CICD.md) | CANONICAL | 2026-04-11 | Vercel setup, GitHub Actions, build verification |
 | 07 | [Interaction Blueprints](07-INTERACTION-BLUEPRINTS.md) | CANONICAL | 2026-04-12 | Complete interaction design for all 53 sections — the production bible |
 | 09 | [Asset Architecture](09-ASSET-ARCHITECTURE.md) | CANONICAL | 2026-04-12 | Lane/Figure/Pins prototype options + swappable interface pattern |
+| **14** | **[PRD (Product Requirements Document)](14-PRD.md)** | **CANONICAL** | **2026-04-13** | **Vision, personas, user journeys, requirements, success metrics, milestones, risk register, definition of done — the north star every session works toward** |
 
 ---
 
@@ -83,9 +84,18 @@ The total project is ~12 content sessions + 4 asset sessions + 12 scene-building
 
 ---
 
+## Living Documents (Updated Frequently)
+
+These live at `docs/` root (not in `specs/`) because they change often:
+
+| Doc | Purpose | Updated |
+|-----|---------|---------|
+| **[STATUS.md](../STATUS.md)** | Current state dashboard — what's done, in progress, next 3 sessions, blockers, recent commits. **Read this first when starting a new session.** | Every session |
+| **[GLOSSARY.md](../GLOSSARY.md)** | Canonical definitions for every bowling term used in content. Single source of truth for jargon. | When new terms appear |
+
 ## Other Documentation
 
-- **`docs/SESSION-KICKOFF.md`** — Original project brief and vision document. Authoritative on intent, superseded on technical details by the numbered specs.
+- **`docs/SESSION-KICKOFF.md`** — Original project brief and vision document. Authoritative on intent, superseded on technical details by the numbered specs and the PRD.
 - **`docs/research/`** — 11,908 lines of bowling science source material across 8 files. Reference material for content writing.
 - **`docs/reference/`** — Historical conversation logs and design references.
 - **`README.md`** (project root) — Quick-start guide for developers landing on the repo.
@@ -101,7 +111,10 @@ The total project is ~12 content sessions + 4 asset sessions + 12 scene-building
 - **3D assets built**: Ball (premium clearcoat), Pins (lathe procedural)
 - **3D assets pending**: Lane, Figure, Oil pattern data, Ball upgrades
 - **Scene components built**: rev-rate, default, prototype (3 of ~53 planned)
-- **Spec documents**: 13 (this index + 12 numbered specs)
-- **Total documentation**: ~6,500 lines across all specs and handoffs
+- **Spec documents**: 14 (this index + 13 numbered specs)
+- **Living docs**: 2 (STATUS.md, GLOSSARY.md)
+- **Total documentation**: ~10,000 lines across all specs, handoffs, and living docs
 
-Last build verified: 2026-04-12, all routes 200, no errors.
+Last build verified: 2026-04-13, all routes 200, no errors.
+
+For the most current state, always read [`docs/STATUS.md`](../STATUS.md) — it's updated every session.
